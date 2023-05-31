@@ -1,0 +1,278 @@
+*{
+    font-family: Arial, sans-serif;
+}
+body{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    overflow-x: hidden;
+}
+
+#main-container{
+    margin-top: 250px;
+    width: 70%;
+    height: 1000px;
+}
+
+#description{
+    height: auto;
+    color: white;
+    margin: 30px;
+    font-size: 20px;
+}
+
+#description-head{
+    color: white;
+    margin: 30px;
+    font-size: larger;
+}
+
+#month-name{
+    color: white;
+    margin-left: 30px;
+    border-radius: 10px;
+    padding: 15px;
+    position: relative;
+}
+
+#month-name:before, #month-name:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(to right, black, rgb(69, 170, 69), black);
+}
+
+#month-name:before {
+    top: 0;
+}
+
+#month-name:after {
+    bottom: 0;
+}
+
+#trips-row{
+    margin: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#trip-window1, #trip-window2, #trip-window3, #trip-window4, #trip-window5, #trip-window6{
+    height: 400px;
+    width: 80%;
+    border: 1px solid white;
+    margin: 20px;
+    border-radius:10px;
+    box-shadow:0px 0px 2px 2px white; 
+    margin: 30px;
+}
+
+#trip-date-window{
+    width: 60px;
+    height: 70px;
+    border: 1px solid white;
+    margin-left: 40px;
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+#heading{
+    display: flex;
+    flex-direction: row;
+}
+
+#trip-name{
+    color: white;
+    margin-left: 40px;
+    width: auto;
+}
+
+#trip-img{
+    margin-top: 20px;
+    width: 100%;
+    height: 74%;
+    display: flex;
+    justify-content: center;
+    
+}
+
+#image{
+    width: 100%;
+    height: 100%;
+    border-radius:10px;
+}
+
+a{
+    text-decoration: none;
+}
+
+#trip-window1:hover, 
+#trip-window2:hover,
+#trip-window3:hover,
+#trip-window4:hover,
+#trip-window5:hover, 
+#trip-window6:hover {
+    box-shadow:0px 0px 5px 5px rgb(69, 170, 69);
+    transform: translateY(-10px);
+    transition: transform 0.3s ease;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.4); 
+}
+
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 35%;
+}
+
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#headeris{
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(69, 170, 69);
+    border-radius:10px;
+    
+}
+
+#mhead{
+    display: flex;
+    flex-direction: column;
+    margin-left: 8px;
+    color: white;
+    margin-top: 2px;
+}
+
+#nosauk{
+    margin: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+}
+
+#datums{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#modal-img-cont{
+    margin: 15px;
+
+}
+
+#modal-img{
+    width: 100%;
+    height: 500px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+
+#laiks-head{
+    background-color: rgb(69, 170, 69);
+    border-radius:10px;
+    color: white;
+    padding: 10px;
+}
+
+#laiks{
+    margin: 20px;
+    font-size: larger;
+}
+
+#apraksts-head{
+    background-color: rgb(69, 170, 69);
+    border-radius:10px;
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+
+}
+
+#apraksts{
+    margin: 20px;
+}
+
+#more1, #more2, #more3, #more4, #more5, #more6{
+    display: none;
+}
+
+#myBtn1, #myBtn2, #myBtn3, #myBtn4, #myBtn5, #myBtn6{
+    border-radius:10px;
+    box-shadow:0px 0px 2px 2px white; 
+    margin: 10px;
+    background-color: white;
+    border: 1px solid rgb(69, 170, 69);
+    position: absolute;
+    height: 30px;
+    width: 90px;
+}
+
+#myBtn1:hover, 
+#myBtn2:hover,
+#myBtn3:hover,
+#myBtn4:hover,
+#myBtn5:hover, 
+#myBtn6:hover{
+    box-shadow:0px 0px 2px 2px rgb(69, 170, 69); 
+    background-color: rgb(69, 170, 69);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#add-btn1, #add-btn2, #add-btn3, #add-btn4, #add-btn5, #add-btn6{
+    border-radius:10px;
+    box-shadow:0px 0px 2px 2px white; 
+    margin: 10px;
+    background-color: white;
+    border: 1px solid rgb(69, 170, 69);
+    width: 150px;
+    height: 40px;
+    margin-top: 30px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+#add-btn1:hover,
+#add-btn2:hover,
+#add-btn3:hover,
+#add-btn4:hover,
+#add-btn5:hover,
+#add-btn6:hover{
+    box-shadow:0px 0px 2px 2px rgb(69, 170, 69); 
+    background-color: rgb(69, 170, 69);
+    color: white;
+    font-weight: bold;
+}

@@ -1,0 +1,65 @@
+*{
+    font-family: Arial, sans-serif;
+}
+body{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    overflow-x: hidden;
+}
+
+
+#main-cont{
+    width: 70%;
+}
+
+#user-info-cont{
+    margin-top: 250px;
+    border: 3px solid rgb(69, 170, 69);
+    border-radius: 10px;
+}
+
+#info-head{
+
+    margin: 30px;
+    color: white;
+    font-weight: bold;
+}
+
+#info-main{
+    margin: 30px;
+    color: white;
+}
+
+#username, #email, #reg-date{
+    margin:20px;
+}
+
+#my-trips-cont{
+    margin-top: 50px;
+    border-radius: 10px;
+    border: 3px solid rgb(69, 170, 69);
+    
+}
+
+#my-trips-head{
+    color: white;
+    font-weight: bold;
+    margin: 10px;
+}
+
+#trips-cont {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.trip-item {
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+    box-sizing: border-box;
+}
+
+.first-row {
+    margin: auto;
+}

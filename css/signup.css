@@ -1,0 +1,92 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 40%, black 100%), url(../img/signupimg.webp);
+    background-size: cover; 
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+a{
+    text-decoration: none;
+    color: purple;
+}
+
+#logo{
+    font-size: 2vw;
+    font-weight: bold;
+    padding: 30px;
+}
+
+@media screen and (max-width: 768px) {
+    #logo {
+        font-size: 5vw;
+    }
+
+    h2 {
+        font-size: 4vw;
+    }
+
+    #signup {
+        width: 90%;
+    }
+}
+
+#signup {
+    width: 400px;
+    padding: 16px;
+    background-color: transparent;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+    margin: auto;
+    border-radius: 10px;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+label {
+    color: black;
+    display: block;
+    font-weight: bold;
+}
+
+input[type="text"],input[type="email"], input[type="password"] {
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+input[type="submit"], button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    background-color: #333;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+input[type="submit"]:hover, button:hover {
+    border: 3px solid rgb(69, 170, 69);
+    border-radius: 10px;
+    font-weight: bold;
+}

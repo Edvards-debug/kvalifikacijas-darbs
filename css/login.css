@@ -1,0 +1,127 @@
+html{
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: black;
+}
+
+#left, #right{
+    width: 50%;
+}
+
+@media screen and (max-width: 768px) {
+    #left, #right {
+        width: 100%;
+    }
+
+    body {
+        flex-direction: column;
+    }
+
+    #logo {
+        font-size: 5vw; 
+    }
+
+    h1 {
+        font-size: 5vw;
+    }
+
+    #login {
+        width: 90%;
+        margin: 20px;
+    }
+}
+
+a{
+    text-decoration: none;
+    color: purple;
+}
+
+#logo{
+    font-size: 2vw;
+    margin: 30px;
+    font-weight: bold;
+}
+
+#imgcont{
+    width: 80%;
+    height: 100%;
+    background-image: linear-gradient(to right, transparent, black),
+    url('../img/loginimg.webp');
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#right{
+    display: flex;
+    justify-content: center;
+    margin: 100px;
+}
+
+#login {
+    width: 700px;
+    padding: 16px;
+    margin: 50px;
+}
+
+h1{
+    color: white;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    font-size: 2vw;
+}
+
+h2 {
+    text-align: center;
+    color: white;
+}
+
+label {
+    color: #555;
+    display: block;
+    color: rgb(69, 170, 69);
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 2px solid rgb(69, 170, 69);
+    background-color: transparent;
+    border-radius: 10px;
+    color: white;
+    
+}
+
+input[type="submit"], button {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    background-color: transparent;
+    cursor: pointer;
+    margin-left: 80px;
+    margin-top: 10px;
+    width: 80%;
+
+}
+
+input[type="submit"]:hover, button:hover {
+    border: 1px solid purple;
+    color: rgb(69, 170, 69);
+    border-radius: 10px;
+}

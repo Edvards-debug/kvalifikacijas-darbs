@@ -1,0 +1,276 @@
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    font-size: 1.5em;
+  }
+
+  #main-cont {
+    margin-top: 300px;
+    position: absolute;
+    width: 70%;
+    border-radius: 10px;
+    padding: 20px;
+    background: black;
+    z-index: 1;
+}
+
+#main-cont::before, #main-cont::after {
+    content: "";
+    position: absolute;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(to bottom, black 2%, rgb(69, 170, 69));
+}
+
+#main-cont::before {
+    top: 0;
+    left: 0;
+}
+
+#main-cont::after {
+    top: 0;
+    right: 0;
+}
+
+
+#intro-cont {
+  position: relative;
+  color: white;
+  width: 100%;
+  margin: 50px;
+  font-size: larger;
+  height: 500px;
+  padding: 20px;
+  background: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0));
+  z-index: 2;
+}
+#main-cont {
+  position: relative;
+  overflow: hidden;
+  border-top: 3px solid black;
+  border-bottom: 3px solid rgb(69, 170, 69);
+}
+
+#slideshow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80%;
+  height: 100%;
+  z-index: -1;
+  margin-left: 20px
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  animation: slide 20s infinite;
+  background-size: cover;
+  opacity: 0.7;
+  background-blend-mode: darken;
+}
+
+.slide:nth-child(1) {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 1)10%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 1)), url('../img/img2.jpg');
+  animation-delay: 0s;
+}
+
+.slide:nth-child(2) {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 1)10%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 1)), url('../img/img3.jpg');
+  animation-delay: 7s;
+}
+
+.slide:nth-child(3) {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 1)10%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 1)), url('../img/img4.jpg');
+  animation-delay: 14s;
+}
+
+#intro-cont-head {
+  width: 40%;
+  margin-top: 80px;
+}
+
+#intro {
+  width: 40%;
+}
+
+@keyframes slide {
+  0% {opacity: 0;}
+  10% {opacity: 1;}
+  50% {opacity: 1;}
+  60% {opacity: 0;}
+  100% {opacity: 0;}
+}
+
+#nl-cont {
+  color: white;
+  margin: auto;
+  margin-top: 200px;
+  border-radius: 10px;
+  width: 60%;
+  padding: 30px;
+  position: relative;
+}
+
+#nl-cont:before, #nl-cont:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(to right, black, rgb(69, 170, 69), black);
+}
+
+#nl-cont:before {
+  top: 0;
+}
+
+#nl-cont:after {
+  bottom: 0;
+}
+
+#newsletter-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  padding: 20px;
+  width: 70%;
+  margin: 0 auto;
+  border-radius: 5px;  
+}
+
+
+
+#newsletter-form input {
+  margin-bottom: 10px;
+  padding: 10px;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid rgb(69, 170, 69);
+  background-color: transparent;
+  color: white;
+  height: 50px;
+  font-size: 1em;
+  margin: 20px;
+}
+
+#newsletter-form button {
+  padding: 20px 40px;
+  color: white;
+  background-color: transparent;
+  border: none;
+  border: 2px solid rgb(69, 170, 69);
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.5em;
+}
+
+#newsletter-form button:hover{
+  color: green;
+  background-color: white;
+}
+
+#infopan-con{
+  color: white;
+  width: 80%;
+  margin: 50px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#infopan-head{
+  font-size: larger;
+  display: flex;
+  justify-content: center
+}
+
+
+#inforow{
+  display: flex;
+  flex-direction: row;
+  margin: 50px;
+}
+
+#infoimg{
+  width: 500px;
+  height: 200px;
+  margin: 30px;
+}
+
+#infoimg img{
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+#textinfo{
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#merch-head {
+  margin: 50px;
+  display: flex;
+  justify-content: center;
+  color: white;
+  border-style: solid;
+  border-width: 3px 0;
+  border-image: linear-gradient(to right, black, transparent, rgb(69, 170, 69), transparent, black) 1;
+}
+
+.slideshow-container {
+  position: relative;
+  width: 80%;
+  margin: 30px;
+}
+
+.slideshow-container {
+  overflow-x: auto;
+  white-space: nowrap;
+  overflow-x: hidden;
+  display: flex;
+  margin: auto;
+}
+
+.mySlides {
+  flex: 0 0 auto;
+  width: 33.33%; 
+  margin: 20px;
+  color: white;
+  height: 80%;
+}
+
+.mySlides img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.merchhead{
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+  font-weight: bold;
+}
+
+.merchprice{
+  display: flex;
+  justify-content: center;
+  font-size: larger;
+  color: rgb(69, 170, 69);
+}
+
+
