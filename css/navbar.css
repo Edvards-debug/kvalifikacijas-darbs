@@ -17,7 +17,7 @@ nav {
   padding-top: 20px ;
   margin-top: 0;
   display: flex;
-  justify-content: center;  
+  justify-content: center; 
   align-items: center; 
   position: fixed;
   width: 100%;
@@ -221,4 +221,42 @@ a#wname:link {
   background-color: rgb(69, 170, 69);
   color: white;
   cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  #right, #left {
+      font-size: 2em; 
+  }
+
+  nav ul {
+      font-size: 1em; 
+      margin-right: 10px; 
+  }
+
+  nav ul li {
+      font-size: 0.8em;
+  }
+
+  .modal-content-cart {
+      width: 100%;
+  }
+
+  #carthead{
+      font-size: 1.2em;
+      margin: 20px;
+  }
+
+  #cart-total{
+      font-size: 1em; 
+      padding: 10px; 
+  }
+  
+  .nav-container {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  nav ul {
+      display: none;
+  }
 }

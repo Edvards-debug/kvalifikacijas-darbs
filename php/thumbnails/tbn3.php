@@ -6,18 +6,18 @@
                                         Pkt.
                                     </div>
                                     <div id="trip-date">
-                                        26
+                                        30
                                     </div>
                                     <div id="trip-month">
-                                        mai.
+                                       jun.
                                     </div>
                                 </div>
                                 <div id="trip-name">
-                                    <h2>Lorem Ipsums3</h2> 
+                                    <h2>Jūrmalas smilšu takas</h2> 
                                 </div>
                             </div>
                             <div id="trip-img">
-                                <img src="img/img1.jpg" id="image" alt="hiking">
+                                <img src="img/jurmala.jpg" id="image" alt="hiking">
                             </div>
 
                         </div>

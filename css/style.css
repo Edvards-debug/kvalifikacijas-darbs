@@ -273,4 +273,81 @@ body {
   color: rgb(69, 170, 69);
 }
 
+@media screen and (max-width: 768px) {
+  #main-cont {
+    width: 90%;
+    margin-top: 50px;
+    padding: 10px;
+  }
+  
+  #intro-cont {
+    margin: 20px;
+    font-size: medium;
+    height: auto;
+    padding: 10px;
+  }
+
+  #intro-cont-head, #intro {
+    font-size: smaller; 
+    word-wrap: break-word; 
+  }
+
+  #slideshow {
+    width: 90%;
+    margin-left: 5%;
+  }
+
+  .slide {
+    height: auto;
+  }
+
+  #intro-cont-head {
+    width: 80%;
+    margin-top: 40px;
+  }
+
+  #intro {
+    width: 80%;
+  }
+
+  #nl-cont {
+    width: 90%;
+  }
+
+  #newsletter-form {
+    width: 90%;
+  }
+
+  #newsletter-form input {
+    height: 40px;
+    font-size: 0.8em;
+    margin: 10px;
+  }
+
+  #newsletter-form button {
+    padding: 10px 20px;
+    font-size: 1em;
+  }
+
+  #infopan-con{
+    width: 90%;
+  }
+
+  #infoimg{
+    width: 100%;
+  }
+
+  #inforow{
+    flex-direction: column;
+  }
+
+  .slideshow-container {
+    width: 90%;
+  }
+
+  .mySlides {
+    width: 100%;
+    height: auto;
+  }
+}
 

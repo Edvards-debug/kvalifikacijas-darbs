@@ -1,11 +1,9 @@
-
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 let cartTotal = document.querySelector('#cart-total');
-let stripe = Stripe('pk_test_51NDQjkGNH2Xh41tJXhpyyJkQACnGcju9xsfZGxnjDhSGdckiKwIdXmLjUBMkSbmWMqNQQXKcbRnAlODlE6GOxAnm00VTWq6fgl');
+let stripe = Stripe('pk_test_51NFy3MAPSuMDYJ8AtEtQQPKeAQgqFIGAtaKX2Qm82ebUdND24PY45IBjMhchan1mS8klrrxqdtaYq6tz8T5S0qgq00cEGKt4Kn');
 
 
 function addToCart(event) {
- 
   var button = event.target;
 
   var name = button.getAttribute('data-name');
@@ -19,10 +17,8 @@ function addToCart(event) {
     var existingItem = cart.find(item => item.name === name && item.color === color && item.size === size);
     
     if (existingItem) {
-    
       existingItem.quantity += parseInt(quantity);
     } else {
-      
       var item = {
         id: Date.now().toString(),
         name: name,
@@ -36,7 +32,6 @@ function addToCart(event) {
     }
 
     localStorage.setItem('cart', JSON.stringify(cart));
-   
     updateCartUI();
 
   } else {
@@ -47,15 +42,11 @@ function addToCart(event) {
 function removeFromCart(event) {
   var button = event.target;
 
-
   var id = button.getAttribute('data-id');
 
- 
   cart = cart.filter(item => item.id !== id);
 
-
   localStorage.setItem('cart', JSON.stringify(cart));
-
 
   updateCartUI();
 }
@@ -82,14 +73,13 @@ function updateCartUI() {
           <div style="margin:10px">Price: ${item.price}</div>
         </div>
       </div>
-      <button class="delete-button" data-id="${item.id}">Delete</button>
+      <button class="delete-button" data-id="${item.id}">Dzēst</button>
     `;
     cartProducts.appendChild(itemElement);
     
     total += Number(item.price.replace('€', '')) * item.quantity;
   });
 
- 
   cartTotal.innerHTML = `Total Price: &euro;${total.toFixed(2)}`;
 
   if (cart.length == 0) {
@@ -103,16 +93,20 @@ function updateCartUI() {
   else if (cart.length && !document.querySelector('.checkout-button')) {
     let checkoutButton = document.createElement('button');
     checkoutButton.classList.add('checkout-button');
-    checkoutButton.innerText = "Checkout";
+    checkoutButton.innerText = "Apmaksāt";
     checkoutButton.style.marginBottom = '20px';
     checkoutButton.addEventListener('click', handleCheckout);
-
+  
     if (!document.querySelector('.space-element')) {
       let spaceElement = document.createElement('div');
       spaceElement.classList.add('space-element');
       spaceElement.style.height = '100px';
+
       checkoutButton.insertAdjacentElement('afterend', spaceElement);
     }
+  
+  
+    cartTotal.insertAdjacentElement('afterend', checkoutButton);
   }
 }
 
@@ -131,7 +125,7 @@ updateCartUI();
 function handleCheckout(event) {
   event.preventDefault();
 
-  fetch('/create-checkout-session', {
+  fetch('php/db/create-checkout-session.php', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
@@ -144,6 +138,7 @@ function handleCheckout(event) {
     return response.json();
   })
   .then(function(session) {
+    console.log(session); 
     return stripe.redirectToCheckout({ sessionId: session.id });
   })
   .then(function(result) {

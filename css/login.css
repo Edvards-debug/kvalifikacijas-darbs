@@ -1,4 +1,8 @@
-html{
+html, body, * {
+    box-sizing: border-box;
+}
+
+html {
     display: flex;
     flex-direction: column;
 }
@@ -13,7 +17,7 @@ body {
     background-color: black;
 }
 
-#left, #right{
+#left, #right {
     width: 50%;
 }
 
@@ -27,11 +31,11 @@ body {
     }
 
     #logo {
-        font-size: 5vw; 
+        font-size: 2.5em; 
     }
 
     h1 {
-        font-size: 5vw;
+        font-size: 2.5em;
     }
 
     #login {
@@ -40,48 +44,48 @@ body {
     }
 }
 
-a{
+a {
     text-decoration: none;
     color: purple;
 }
 
-#logo{
-    font-size: 2vw;
+#logo {
+    font-size: 2em;
     margin: 30px;
     font-weight: bold;
 }
 
-#imgcont{
+#imgcont {
     width: 80%;
     height: 100%;
     background-image: linear-gradient(to right, transparent, black),
     url('../img/loginimg.webp');
 }
 
-img{
-    width: 100%;
-    height: 100%;
+img {
+    max-width: 100%;
+    height: auto;
     object-fit: cover;
 }
 
-#right{
+#right {
     display: flex;
     justify-content: center;
     margin: 100px;
 }
 
 #login {
-    width: 700px;
+    max-width: 700px;
     padding: 16px;
     margin: 50px;
 }
 
-h1{
+h1 {
     color: white;
     display: flex;
     justify-content: center;
     margin-bottom: 50px;
-    font-size: 2vw;
+    font-size: 2em;
 }
 
 h2 {

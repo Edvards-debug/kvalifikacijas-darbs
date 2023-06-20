@@ -1,19 +1,23 @@
 <?php
-   if(session_status() === PHP_SESSION_NONE) {
+if(session_status() === PHP_SESSION_NONE) {
     session_start();
 }
-    include 'php/db/db_connect.php';
-    
-    $username = $_SESSION['username'];
-    $query = "SELECT email, username, reg_date FROM Users WHERE username = ?";
-    
-    if($stmt = $conn->prepare($query)){
-        $stmt->bind_param("s", $username);
-        $stmt->execute();
-        $stmt->bind_result($email, $username, $reg_date);
-        $stmt->fetch();
-    }
+include 'php/db/db_connect.php';
 
+if(isset($_SESSION['admin_username'])) {
+    $username = $_SESSION['admin_username'];
+} else {
+    $username = $_SESSION['username'];
+}
+
+$query = "SELECT email, username, reg_date FROM Users WHERE username = ?";
+
+if($stmt = $conn->prepare($query)){
+    $stmt->bind_param("s", $username);
+    $stmt->execute();
+    $stmt->bind_result($email, $username, $reg_date);
+    $stmt->fetch();
+}
 
 ?>
 <!DOCTYPE html>

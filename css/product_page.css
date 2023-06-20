@@ -32,6 +32,12 @@ select{
     margin: 10px;
     color: black;
 }
+
+.product-description{
+  width: 100%;
+  padding: auto;
+  height: auto;
+}
    
 .color{
   color:black;

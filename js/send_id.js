@@ -1,15 +1,11 @@
 window.addEventListener('load', function() {
-   
     var addButtons = document.querySelectorAll("[id^='add-btn']");
     
     addButtons.forEach(function(btn) {
-      
         var tripId = btn.dataset.tripId;
         
-      
         checkRegistration(btn, tripId);
         
-      
         btn.addEventListener('click', function() {
             addOrRemoveTrip(btn, tripId);
         });

@@ -17,7 +17,7 @@ if (mysqli_num_rows($check) > 0) {
 $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
 
-$insert = mysqli_query($conn, "INSERT INTO users (email, username, password) VALUES ('$email', '$username', '$hashed_password')");
+$insert = mysqli_query($conn, "INSERT INTO Users (email, username, password) VALUES ('$email', '$username', '$hashed_password')");
 if ($insert) {
     header("Location: ../reg_succesfull.php");
 } else {

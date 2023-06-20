@@ -1,3 +1,9 @@
+<?php
+if(session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,13 +33,13 @@
     </h1>
     </div>
     <div id="description">
-    Šajā pārgājienu kalendārā ir apkopoti teju visi publiskie pārgājieni Latvijā, kuros vari piedalīties kopā ar citiem. Šo pārgājienu informācija, tās precizitāte un citas detaļas nav EDZAHIKES.LV atbildībā. Ja ir radušies jautājumi par dalību pārgājienā, vērsies pie organizatora spiežot “Uzzināt Vairāk.” Šo pārgājienu apkopošana un informācijas uzturēšana ir brīvprātīgs darbs. p.s. pievienojies pārgājienu grupai Telegram!
+    Šajā pārgājienu kalendārā ir apkopoti teju visi publiskie pārgājieni Latvijā, kuros vari piedalīties kopā ar citiem. Šo pārgājienu informācija, tās precizitāte un citas detaļas nav HIKINHPATH.LV atbildībā. Ja ir radušies jautājumi par dalību pārgājienā, vērsies pie organizatora spiežot “Uzzināt Vairāk.” Šo pārgājienu apkopošana un informācijas uzturēšana ir brīvprātīgs darbs. p.s. pievienojies pārgājienu grupai Telegram!
     </div>
     
         <div id="trip-container">
             <div id="month-cont">
                 <div id="month-name">
-                <h1>Maijs</h1>
+                <h1>Jūnijs</h1>
                 </div>
                 <div id="trips">
                     <div id="trips-row" style="justify-content: center;">
@@ -50,7 +56,7 @@
             </div>
             <div id="month-cont">
                 <div id="month-name">
-                <h1>Jūnijs</h1>
+                <h1>Jūlijs</h1>
                 </div>
                 <div id="trips">
                     <div id="trips-row" style="justify-content: flex-start;">
@@ -66,7 +72,7 @@
             </div>
             <div id="month-cont">
                     <div id="month-name">
-                    <h1>Jūlijs</h1>
+                    <h1>Augusts</h1>
                     </div>
                     <div id="trips">
                         <div id="trips-row" style="justify-content: flex-start; ">

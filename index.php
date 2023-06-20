@@ -1,3 +1,9 @@
+<?php
+if(session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,7 +41,7 @@
 
     <div id="nl-cont">
         <div id="nl-head">
-        <h1>Pievienojies "HikingPath" Bez Maksas un Dodies Dabā!</h1>
+        <h1>Pievienojies "CAMP HIKINGPATH" Bez Maksas un Dodies Dabā!</h1>
         </div>
         <div id="nl-apr">
         <h3>Saņem svaigākās un jaunākās ziņas un informāciju par turmpākajiem pārgājieniem un aktivitātēm dabā! Atstāj savus kontaktus šeit:</h3>
@@ -54,7 +60,7 @@
 
     <div id="infopan-con">
         <div id="infopan-head">
-        <h1>Ko Tu Atradīsi "Camp EDZAHIKING"?</h1>
+        <h1>Ko Tu Atradīsi "Camp HIKINGPATH"?</h1>
         </div>
         <div id="infopan">
             <div id="inforow">
@@ -102,67 +108,80 @@
     </div>
 
     <div id="merch-head">
-        <h1>Nēsā līdzi motivāciju, kur vien Tu doties!</h1>
+        <h1>Nēsā līdzi motivāciju, kur vien Tu dodies!</h1>
     </div>
 
     <div class="slideshow-container">
+        
     <div class="mySlides">
         <img src="img/merch/merch1.webp">
         <div class="merchhead">
-        Krekls6
+        "Izcīnītājs" vīriešu krekls
         </div>
+        <a href="build/shop.php">
         <div class="merchprice">
-        &euro;99.99
+        &euro;29.99
         </div>
+        </a>
     </div>
     <div class="mySlides">
         <img src="img/merch/merch2.png">
         <div class="merchhead">
-        Krekls6
+        "Priežu gāzējs" vīriešu krekls
         </div>
+        <a href="build/shop.php">
         <div class="merchprice">
-        &euro;99.99
+        &euro;19.89
         </div>
+        </a>
     </div>
 
     <div class="mySlides">
         <img src="img/merch/merch3.webp">
         <div class="merchhead">
-        Krekls6
+        "Ūdens straume" 2x pāru krekls
         </div>
+        <a href="build/shop.php">
         <div class="merchprice">
-        &euro;99.99
+        &euro;59.99
         </div>
+        </a>
     </div>
 
     <div class="mySlides">
         <img src="img/merch/merch4.webp">
         <div class="merchhead">
-        Krekls6
+        "Esmu Everests" vīriešu krekls
         </div>
+        <a href="build/shop.php">
         <div class="merchprice">
-        &euro;99.99
+        &euro;29.59
         </div>
+        </a>
     </div>
 
     <div class="mySlides">
         <img src="img/merch/merch5.webp">
         <div class="merchhead">
-        Krekls6
+        "Kāp un meklē" vīriešu krekls
         </div>
+       <a href="build/shop.php">
         <div class="merchprice">
-        &euro;99.99
+        &euro;15.59
         </div>
+        </a>
     </div>
 
     <div class="mySlides">
         <img src="img/merch/merch6.jpg">
         <div class="merchhead">
-        Krekls6
+        "Mana releksācija" unisekss krekls
         </div>
+        <a href="build/shop.php">
         <div class="merchprice">
-        &euro;99.99
+        &euro;22.99
         </div>
+        </a>
     </div>
 
 </div>

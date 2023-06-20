@@ -3,21 +3,21 @@
                             <div id="heading">
                                 <div id="trip-date-window">
                                     <div id="trip-day">
-                                        Pkt.
+                                        Sest.
                                     </div>
                                     <div id="trip-date">
-                                        26
+                                        8
                                     </div>
                                     <div id="trip-month">
-                                        mai.
+                                        jūl.
                                     </div>
                                 </div>
                                 <div id="trip-name">
-                                    <h2>Lorem Ipsums4</h2> 
+                                    <h2>Aizputes vēstures ceļi</h2> 
                                 </div>
                             </div>
                             <div id="trip-img">
-                                <img src="img/img1.jpg" id="image" alt="hiking">
+                                <img src="img/aizpute.jpg" id="image" alt="hiking">
                             </div>
 
                         </div>
